@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h3>Listado de post</h3>
+    <!-- post container tiene dentro de si a post card y post card tiene postbtn para entender el posicionamiento en cada elemento -->
+    <!-- se agrega contador para ver comportamiento -->
+    <CounterOption />
+    <PostContainer />   
+    <CounterComposition />
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+  import PostContainer from './components/PostContainer.vue';
+   import CounterOption from './components/CounterOption.vue';
+  import CounterComposition from './components/CounterComposition.vue';
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+h3 {
+  color: purple;
 }
 </style>
